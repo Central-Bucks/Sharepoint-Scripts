@@ -1,0 +1,13 @@
+﻿/* Hides paging element as it's not needed for vertical tiles  */  
+.ms-promlink-header {
+display:none;
+}
+/* Sets width of webpart area to set space needed for 2 promoted links (160px * 3) */
+.ms-promlink-root {
+  width: 480px;
+  overflow: visible;
+}
+/* Sets width of tile area to force wrap after 2 promoted links  */
+.ms-promlink-body {
+    width: 480px;
+  }     

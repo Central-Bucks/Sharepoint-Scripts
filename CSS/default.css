@@ -1,0 +1,82 @@
+<style type="text/css">
+ #sideNavBox {DISPLAY: none;}
+ #contentBox {MARGIN-LEFT: 15px;}
+.ms-webpart-titleText
+{
+        color: #FFFFFF !important;
+        text-align: center !important;
+        background-color:#233c52;
+        font-size: 20px; 
+        font-weight: bold; 
+} 
+.ms-webpart-titleText  A:link, .ms-webpart-titleText A:active, .ms-webpart-titleText A:visited
+{
+     color: #FFFFFF !important;
+     text-align: center !important;
+}
+.ms-webpart-titleText A:hover
+{
+     color: #FFFFFF !important;
+     text-align: center !important;
+     text-decoration: none;
+     cursor:arrow;
+}
+.ms-viewheadertr
+{
+     display:none;
+}
+.ms-listviewtable
+{
+	font: normal 12px/150% Arial, Helvetica, sans-serif; 
+	background: #fff; 
+	overflow: hidden; 
+	border: 1px solid #233c52; 
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-radius: 3px; 
+	border-collapse: collapse; 
+	text-align: left; 
+	width: 100%; 
+        margin-top: -8px !important
+}
+.ms-vb2 a
+{
+	color:black !important;
+}
+.ms-breadcrumb-top{
+        background-color:#233c52;    
+}
+.ms-core-listMenu-horizontalBox {
+        background-color:#233c52;
+        font-size: 14px; 
+        font-weight: bold; 
+        color:#FFF;
+}
+.ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item {
+     color: #FFF;
+}
+.ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item:hover{
+     background-color: #df8011 !important;
+     color: black !important;
+}
+ul.dynamic {
+    margin-top: -5px;
+    background-color: #233c52;
+    width: 280px !important;
+    border: 1px solid #233c52;
+}  
+ul.dynamic .ms-core-listMenu-item {
+    background-color: #233c52;
+    padding: 10px 5px 10px 5px  !important;
+    margin: -10px -10px 10px -10px  !important;
+    color: #fff;
+}  
+ul.dynamic li:last-child {
+     padding: 10px 5px 10px 5px  !important;
+     margin: -10px -5px -30px -5px  !important;
+}
+ul.dynamic .ms-core-listMenu-item:hover{
+    background-color: #df8011;
+    color:black;
+}
+</style>

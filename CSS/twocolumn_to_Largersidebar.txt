@@ -1,0 +1,5 @@
+<style type="text/css">
+.ms-wiki-columnSpacing {
+  width: 20% !important;
+} 
+</style>

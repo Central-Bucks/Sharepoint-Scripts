@@ -1,0 +1,51 @@
+<style>
+/* Text and BG on the overlay header*/
+.ms-tileview-tile-titleTextMediumCollapsed {
+background: none repeat scroll 0 0 #1f7db5;
+font-size: 24px;
+font-family: "Rockwell";
+color: #FFF;
+line-height: 30px;
+min-height: 10px;
+min-width: 260px;
+padding-left: 5px;
+padding-top: 5px;
+position: absolute;
+top: -100px;
+}
+/* Hides paging element as it's not needed for vertical tiles  */  
+.ms-promlink-header {
+display:none;
+}
+/* Sets width of webpart area to set space needed for 2 promoted links (160px * 1) */
+.ms-promlink-root {
+  width: 260px;
+  overflow: visible;
+}
+/* set properties of tiles */
+div.ms-tileview-tile-content, div.ms-tileview-tile-detailsBox {
+height: 160px !important;
+width: 260px !important;
+}
+/* Sets width of tile area to force wrap after 2 promoted links  */
+.ms-promlink-body {
+    width: 260px;
+}     
+.ms-tileview-tile-detailsBox {
+    width: 260px !important;
+    height: 260px !important;
+    background-color:transparent;
+}
+.ms-tileview-tile-content{
+    background-color: #233c52
+}
+.ms-tileview-tile-content:hover .ms-tileview-tile-detailsBox{
+    width: 260px !important;
+    height: 260px !important;
+    background-color: #1f7db5;
+}
+/* Distance between tiles, grid lines */
+div.ms-tileview-tile-root {
+height: 165px !important;
+}
+</style>

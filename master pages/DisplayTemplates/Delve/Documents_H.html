@@ -1,0 +1,132 @@
+﻿<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>Delve Light Documents - H</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">Display Delve Style Results.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">&#39;Title&#39;:&#39;Title&#39;,&#39;Path&#39;:&#39;Path&#39;,&#39;Description&#39;:&#39;Description&#39;,&#39;EditorOWSUSER&#39;:&#39;EditorOWSUSER&#39;,&#39;LastModifiedTime&#39;:&#39;LastModifiedTime&#39;,&#39;CollapsingStatus&#39;:&#39;CollapsingStatus&#39;,&#39;DocId&#39;:&#39;DocId&#39;,&#39;HitHighlightedSummary&#39;:&#39;HitHighlightedSummary&#39;,&#39;HitHighlightedProperties&#39;:&#39;HitHighlightedProperties&#39;,&#39;FileExtension&#39;:&#39;FileExtension&#39;,&#39;ViewsLifeTime&#39;:&#39;ViewsLifeTime&#39;,&#39;ParentLink&#39;:&#39;ParentLink&#39;,&#39;FileType&#39;:&#39;FileType&#39;,&#39;IsContainer&#39;:&#39;IsContainer&#39;,&#39;ServerRedirectedURL&#39;:&#39;ServerRedirectedURL&#39;,&#39;ServerRedirectedEmbedURL&#39;:&#39;ServerRedirectedEmbedURL&#39;,&#39;ServerRedirectedPreviewURL&#39;:&#39;ServerRedirectedPreviewURL&#39;,&#39;SiteTitle&#39;:&#39;SiteTitle&#39;,&#39;SitePath&#39;:&#39;SitePath&#39;,&#39;ModifiedBy&#39;:&#39;ModifiedBy&#39;</mso:ManagedPropertyMapping>
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://aghy.sharepoint.com/search/_catalogs/masterpage/Display Templates/Search/Documents_H.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_Excel" style="float:left; overflow:hidden; position:relative; ">
+<!--#_ 
+        if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
+            var id = ctx.ClientControl.get_nextUniqueId();
+            var itemId = id + Srch.U.Ids.item;
+			var hoverId = id + Srch.U.Ids.hover;
+			var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Word_HoverPanel.js";
+            $setResultItem(itemId, ctx.CurrentItem);
+            ctx.CurrentItem.csr_Icon = Srch.U.getIconUrlByFileExtension(ctx.CurrentItem);
+            ctx.CurrentItem.csr_OpenApp = "excel";
+            ctx.currentItem_ShowHoverPanelCallback = Srch.U.getShowHoverPanelCallback(itemId, hoverId, hoverUrl);
+            ctx.currentItem_HideHoverPanelCallback = Srch.U.getHideHoverPanelCallback();
+            
+            var baseURL = "/SiteAssets/";
+            var iconURL = "";
+			switch(ctx.CurrentItem.FileType) {
+				case "doc":
+				case "docx":
+					iconURL = baseURL + "word.jpg";
+					break;
+				
+				case "xls":
+				case "xlsx":
+					iconURL = baseURL + "excel.jpg";
+					break;
+				
+				case "ppt":
+				case "pptx":
+					iconURL = baseURL + "ppt.jpg";
+					break;
+
+				case "pdf":
+					iconURL = baseURL + "pdf.jpg";
+					break;
+
+
+				case "vsd":
+				case "vsdx":
+					iconURL = baseURL + "visio.jpg";
+					break;
+
+				case "one":
+					iconURL = "/SiteAssets/onenote.jpg";
+					break;
+
+				case "jpg":
+				case "jpeg":
+				case "gif":
+				case "png":
+				case "tiff":
+					iconURL = baseURL + "image.jpg";
+					break;
+
+				case "txt":
+					iconURL = baseURL + "txt.jpg";
+					break;
+
+				case "zip":
+					iconURL = baseURL + "zip.jpg";
+					break;
+
+				default:
+			}
+			
+		
+			
+_#-->
+
+            <div style="float:left; width:180px; height:200px; border:1; border-color:#233c52; border-style:solid; border-radius:10px; margin:10px; padding:10px; word-wrap: break-word; position:relative;" id="_#= $htmlEncode(itemId) =#_" name="Item" data-displaytemplate="ExcelItem">
+
+				<div style="height:100px; overflow:hidden">
+
+					<table boder = 1>
+					<tr>
+					
+					<td valign="top">
+					<div style="height:48px; overflow:hidden;"><font size="3"><a href="_#=ctx.CurrentItem.Path=#_">_#=ctx.CurrentItem.Title=#_</a></font></div>
+					</td>
+					</tr>
+
+					<td valign="top">
+					<a href="_#=ctx.CurrentItem.Path=#_"><img width="171" height="50" src="_#=iconURL=#_" /></a>
+					</td>
+					</table>
+					
+					
+	
+				</div>
+
+				<font size="2">
+				<div>
+				<b>Last modified:</b> _#=ctx.CurrentItem.LastModifiedTime.format('MMM dd, yyyy')=#_
+				</div>
+				<div>
+				<b>Modified by:</b> _#=ctx.CurrentItem.ModifiedBy=#_ <br/><br/>
+				</div>
+				<div>
+				<b>Site:</b> <a href="_#=ctx.CurrentItem.SitePath=#_">_#=ctx.CurrentItem.SiteTitle=#_</a>
+				</div>
+				</font>
+
+                <div id="_#= $htmlEncode(hoverId) =#_" class="ms-srch-hover-outerContainer"></div>
+                
+
+
+
+            </div>
+<!--#_ 
+        } 
+_#-->
+
+    </div>
+</body>
+</html>

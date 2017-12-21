@@ -1,0 +1,66 @@
+<style>
+      .hide{
+         display: none;
+      }
+     .rel{
+         z-index: 1 !important;
+         display:table;
+         margin:auto;
+     }
+</style>
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+        $(".ms-listviewtable[summary='Links']>tbody>tr").find('a').each(function(){
+               $('#distlinks').append('<option value=' + $(this).attr('href') + '>'+ $(this).text() + '</option>');
+         $(".ms-listviewtable[summary='Links']").addClass('hide');
+         });
+         var ddlh = $('#distlinks').height();
+         var ddlw = $('#distlinks').width();
+         
+         $('#sbox').height(ddlh - 4);
+         $('#sbox').width(ddlw - 28);
+         
+    });
+    function expandBox(){
+        var len  = $('#distlinks> option').length;
+        $('#distlinks').attr('size', length);
+        $('#sbox').addClass('rel');
+    }
+    function filterResult(txt){
+          var test;
+          var patt = new RegExp(txt,"i");
+          var res = $('#distlinks> option').filter(function (){
+              return this.innerHTML.match(patt);
+          });
+         $('#distlinks').val(res[0].value);
+    }
+   function enterTravel(event){
+      var k = event.keyCode;
+      if(k == 13){
+         event.preventDefault();
+         JumptoURL($('#distlinks').val());
+         return false;
+      }
+   }
+   function JumptoURL(url){
+      if(url != ''){
+            var win = window.open(url,'_blank');
+      }
+   }
+   function selectItem(url){
+         if(url != ''){
+             JumptoURL(url);
+         }
+   }
+</script>
+<div style="display:table;margin:auto;">
+          <input type="text" id="sbox" style="position: absolute;z-index:1;" 
+          onfocusin="expandBox()" onkeydown="enterTravel(event)" onkeyup="filterResult(this.value)" autocomplete="off"
+          onfocusout="$('#distlinks').attr('size', 0);$('#sbox').removeClass('rel');$('#distlinks').val('');"></input>
+         <select name="District Links" id="distlinks" style="postion:absolute;width:350px;z-index:0;" 
+         onfocusin="expandBox()" onfocusout="$('#distlinks').attr('size', 
+         0);$('#sbox').removeClass('rel');$('#distlinks').val('');" onchange="JumptoURL(this.value)" onclick="selectItem(this.value)" >
+               <option value=''>Jump to....</option>
+        </select>
+</div>
