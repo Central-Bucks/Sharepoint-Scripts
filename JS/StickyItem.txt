@@ -1,0 +1,16 @@
+<script>
+$(document).ready(function () {
+$('#s4-workspace').bind( 'scroll', function() {
+    var offset = $('div.hrContainer').offset();
+    var test = $('div.hrContainerRight').position();
+    console.log('window position: ' + $(this).scrollTop());
+    if($(this).scrollTop()>= (test.top + offset.top)){
+           $('div.newsContainer').attr('style', 'top: ' + $(this).scrollTop() + 'px !important; position: absolute !important;');
+           console.log('new position: ' + $('div.newsContainer').css("top"));
+    }
+    else{
+                  $('div.newsContainer').attr('style', '');
+    }                  
+  });
+});
+</script>

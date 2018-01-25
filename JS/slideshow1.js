@@ -5,8 +5,8 @@ function autoscroll(){
 }
 
 function fnMove(dir){
-   var dots = $(li.dot);
-   var slides = $(img.slides);
+   var dots = $("li.dot");
+   var slides = $("img.slides");
    
    var curSlide;
    var curLeft;
@@ -14,16 +14,16 @@ function fnMove(dir){
    var pos;
    var epos;
    
-   pos = $(div.sshow-img).position();
+   pos = $("div.sshow-img").position();
    var i = 0;
    
-   $(li.dot).each(function() {
-       if (this.className.indexOf( active)  -1) {
+   $("li.dot").each(function() {
+       if (this.className.indexOf(" active") > -1) {
            curSlide = i;
-           this.classList.remove(active);
+           this.classList.remove("active");
            console.log(curSlide);       
        }
-       i = i + 1
+       i = i + 1;
    });   
 
    if(dir == -1){
@@ -31,10 +31,10 @@ function fnMove(dir){
        nextSlide = dots.length + dir;
      }  
      else{
-       nextSlide = curSlide + dir
+       nextSlide = curSlide + dir;
      }
      
-     epos = 823  nextSlide;
+     epos = 823 * nextSlide;
 
    }
    else{
@@ -42,41 +42,41 @@ function fnMove(dir){
         nextSlide = 0;
      }     
      else{
-        nextSlide = curSlide + dir
+        nextSlide = curSlide + dir;
      }
      
-     epos = 823  nextSlide;
+     epos = 823 * nextSlide;
          
    }   
    
-   if (pos.left = epos){
-       moveFrame(dir,pos.left,epos);
-       epos = (epos  -1);
+   if (pos.left <= epos){
+       //moveFrame(dir,pos.left,epos);
+       epos = (epos * -1);
    }   
    $('div.sshow-img').css('transform','translateX( ' + epos + 'px )');
-   dots[nextSlide].classList.add(active);
+   dots[nextSlide].classList.add("active");
 
    clearInterval(timer);
    timer = setInterval(autoscroll,6000);
 }
 
 function changeSlide(slide){
-   var dots = $(li.dot);
-   var pos = $(div.sshow-img).position();
+   var dots = $("li.dot");
+   var pos = $("div.sshow-img").position();
    var i = 0;
-   var epos = (823  (slide - 1))  -1;
+   var epos = (823 * (slide - 1)) * -1;
    
-   $(li.dot).each(function() {
-       if (this.className.indexOf( active)  -1) {
+   $("li.dot").each(function() {
+       if (this.className.indexOf(" active") > -1) {
            curSlide = i;
-           this.classList.remove(active);
+           this.classList.remove("active");
            console.log(curSlide);       
        }
-       i = i + 1
+       i = i + 1;
    });
 
    $('div.sshow-img').css('transform','translateX( ' + epos + 'px )');
-   dots[(slide - 1)].classList.add(active);
+   dots[(slide - 1)].classList.add("active");
 
    clearInterval(timer);
    timer = setInterval(autoscroll,6000);
